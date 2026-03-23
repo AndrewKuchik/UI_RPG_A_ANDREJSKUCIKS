@@ -1,11 +1,7 @@
 using UnityEngine;
 
-public class Player : Character
+public class Blade : Weapon
 {
-    public override void Attack(Character toHit)
-    {
-        
-    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
