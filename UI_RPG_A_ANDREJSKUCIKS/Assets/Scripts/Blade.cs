@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class Blade : Weapon
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float minDamage, maxDamage;
+    public override float GetDamage()
+    {
+        return Random.Range(minDamage, maxDamage);
+    }
+
     void Start()
     {
         

@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public abstract class Weapon : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public string weaponName;
+   public abstract float GetDamage();
     void Start()
     {
         

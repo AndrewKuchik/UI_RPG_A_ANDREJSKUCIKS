@@ -18,7 +18,15 @@ public abstract class Character : MonoBehaviour
         health -= damage;
         Debug.Log(charName + " takes " + damage + health);
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public void TakeDamage(Weapon thrownWeapon)
+    {
+        float damage = thrownWeapon.GetDamage();
+        health -= damage;
+        Debug.Log(charName + " takes " + damage + health);
+       
+
+    } // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
