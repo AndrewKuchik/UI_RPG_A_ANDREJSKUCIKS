@@ -26,7 +26,14 @@ public abstract class Character : MonoBehaviour
         Debug.Log(charName + " takes " + damage + health);
        
 
-    } // Start is called once before the first execution of Update after the MonoBehaviour is created
+    }
+
+    public bool IsDead()
+    {
+        return health <= 0;
+    }
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         

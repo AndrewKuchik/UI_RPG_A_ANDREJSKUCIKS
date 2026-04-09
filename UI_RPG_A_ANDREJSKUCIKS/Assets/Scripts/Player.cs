@@ -6,8 +6,8 @@ public class Player : Character
     public override void Attack(Character toHit)
     {
         toHit.TakeDamage(activeWeapon);
-        float damage = activeWeapon.GetDamage();
-        toHit.TakeDamage(damage);
+       // float damage = activeWeapon.GetDamage();
+        //toHit.TakeDamage(damage);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
