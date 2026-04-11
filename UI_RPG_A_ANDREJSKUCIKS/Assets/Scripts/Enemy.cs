@@ -8,6 +8,13 @@ public class Enemy : Character
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public override void Attack(Character toHit)
     {
+       
+        if (isFrozen)
+        {
+            Debug.Log("Frozen and skip turn");
+            isFrozen = false;
+            return;
+        }
         float damage = Random.Range(minDamage, maxDamage);
         toHit.TakeDamage(damage);
     }

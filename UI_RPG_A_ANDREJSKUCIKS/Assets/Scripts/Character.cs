@@ -2,10 +2,11 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-    public float health;
+    [SerializeField] private float health;
     public float speed;
     [SerializeField]
     private string charName;
+    public bool isFrozen;
 
     public string CharName
     {
@@ -13,16 +14,16 @@ public abstract class Character : MonoBehaviour
     }
 
     public abstract void Attack(Character toHit);
-    public void TakeDamage(float damage)
+    public virtual void  TakeDamage(float damage)
     {
-        health -= damage;
+        Health -= damage;
         Debug.Log(charName + " takes " + damage + health);
     }
 
     public void TakeDamage(Weapon thrownWeapon)
     {
         float damage = thrownWeapon.GetDamage();
-        health -= damage;
+        Health -= damage;
         Debug.Log(charName + " takes " + damage + health);
        
 
@@ -30,7 +31,19 @@ public abstract class Character : MonoBehaviour
 
     public bool IsDead()
     {
-        return health <= 0;
+        return Health <= 0;
+    }
+
+    public float Health
+    {
+        get {return health;}
+        set {health = Mathf.Max(0,value);}
+    }
+
+    public void Freeze()
+    {
+        Debug.Log("Freezed");
+        isFrozen = true;
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created

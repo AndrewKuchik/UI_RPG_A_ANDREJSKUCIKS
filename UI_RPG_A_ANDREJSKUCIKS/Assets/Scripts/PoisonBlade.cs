@@ -17,6 +17,12 @@ public class PoisonBlade : Blade
         return baseGamage;
     }
 
+    public override void ApplyEffect(Character target)
+    {Debug.Log("Poisoned");
+        target.TakeDamage(2);
+        
+    }
+ 
     void Start()
     {
         

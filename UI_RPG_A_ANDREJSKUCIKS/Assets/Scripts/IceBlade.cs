@@ -1,18 +1,17 @@
 using UnityEngine;
 
-public class Blade : Weapon
+public class IceBlade : Weapon
 {
-    public float minDamage, maxDamage;
     public override float GetDamage()
     {
-        return Random.Range(minDamage, maxDamage);
+        return 5f;
     }
 
     public override void ApplyEffect(Character target)
     {
-        
+        target.Freeze();
     }
-
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         

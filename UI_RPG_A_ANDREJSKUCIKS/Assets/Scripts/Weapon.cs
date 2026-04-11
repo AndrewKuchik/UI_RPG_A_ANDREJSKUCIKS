@@ -9,6 +9,7 @@ public abstract class Weapon : MonoBehaviour
         
     }
 
+    public abstract void ApplyEffect(Character target);
     // Update is called once per frame
     void Update()
     {

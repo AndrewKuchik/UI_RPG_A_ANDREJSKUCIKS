@@ -15,13 +15,17 @@ public class GameManager : MonoBehaviour
         player.TakeDamage(3);
         enemy.TakeDamage(5);
     }
+    public void ToggleButtonShield()
+    {
+        player.ToggleShield();
+    }
 
     private void UpdateUI()
     {
         playerName.text = player.CharName;
         enemyName.text = enemy.CharName;
-        playerHP.text = "HP:" +player.health.ToString("F1");
-        enemyHP.text = "HP:" +enemy.health.ToString("F1");
+        playerHP.text = "HP:" +player.Health.ToString("F1");
+        enemyHP.text = "HP:" +enemy.Health.ToString("F1");
 
 
     }
@@ -61,4 +65,6 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+   
 }
