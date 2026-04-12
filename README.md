@@ -21,6 +21,9 @@ Kad ienaidnieks nomirst, tas tiek iznīcināts un tiek izveidots jauns ienaidnie
 2 Game Over sistēma
 
 Ja spēlētājs zaudē visu veselību, spēle beidzas.
+Projektā es izmantoju enkapsulāciju, lai kontrolētu piekļuvi datiem.
+
+Veselība tiek glabāta kā private mainīgais, un piekļuve tai notiek caur getter un setter. Setter nodrošina, ka veselība nevar nokrist zem 0.
 
 
 3 Ieroču sistēma abstrakcija un polimorfisms
