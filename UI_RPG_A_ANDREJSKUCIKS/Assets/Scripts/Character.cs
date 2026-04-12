@@ -45,6 +45,12 @@ public abstract class Character : MonoBehaviour
         Debug.Log("Freezed");
         isFrozen = true;
     }
+
+    public void Heal(float amount)
+    {
+        Health += amount;
+        Debug.Log(charName + " heals " + amount);
+    }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

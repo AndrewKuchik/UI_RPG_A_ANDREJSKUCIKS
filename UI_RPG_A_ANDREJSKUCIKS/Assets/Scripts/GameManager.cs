@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Enemy enemy;
     [SerializeField] private TMP_Text playerName,playerHP, enemyName, enemyHP;
 
-    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject[] enemyPrefabs;
     [SerializeField] private Transform enemySpawnPoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,12 +49,19 @@ public class GameManager : MonoBehaviour
     private void SpawnNewEnemy()
     {
         Destroy(enemy.gameObject);
-        GameObject newEnemyObj = Instantiate(enemyPrefab, enemySpawnPoint.position, Quaternion.identity);
+        
+        int index = Random.Range(0, enemyPrefabs.Length);
+        GameObject newEnemyObj = Instantiate(enemyPrefabs[index], enemySpawnPoint.position, Quaternion.identity);
         enemy = newEnemyObj.GetComponent<Enemy>();
         Debug.Log("NEW ENEMY ALERT");
         UpdateUI();
     }
 
+    public void HealPlayer()
+    {
+        player.Heal(5f);
+        UpdateUI();
+    }
     private void GameOver()
     {
         Debug.Log("GAME OVER HAHAHA");
