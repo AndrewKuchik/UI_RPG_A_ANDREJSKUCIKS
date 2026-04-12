@@ -71,7 +71,7 @@ galvenais varonis
 trīs dažādi ienaidnieki
 spēles fons
 
-Kad ienaidnieks vai spēlētājs saņem bojājumus scale palielināšana un atgriešana
+Kad ienaidnieks saņem bojājumus scale palielināšana un atgriešana
 
 
 Spēlei arī pievienoju fona mūziku
