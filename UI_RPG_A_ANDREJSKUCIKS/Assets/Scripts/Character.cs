@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public abstract class Character : MonoBehaviour
@@ -25,10 +26,19 @@ public abstract class Character : MonoBehaviour
         float damage = thrownWeapon.GetDamage();
         Health -= damage;
         Debug.Log(charName + " takes " + damage + health);
-       
+
+        StartCoroutine(HitEffect());
 
     }
 
+   IEnumerator HitEffect()
+    {
+        transform.localScale = Vector3.one*1.2f;
+        transform.position += transform.right * 1.2f * Time.deltaTime;
+        yield return new WaitForSeconds(0.05f);
+        transform.localScale = Vector3.one;
+        
+    }
     public bool IsDead()
     {
         return Health <= 0;
