@@ -64,5 +64,15 @@ Ienaidnieki tiek izvēlēti nejauši (random) katru reizi, kad iepriekšējais n
 6 Shield sistēma spēlētājs var ieslēgt/izslēgt vairogu, kas samazina saņemto bojājumu
 
 
+Vizuālie un audio uzlabojumi
 
+
+galvenais varonis
+trīs dažādi ienaidnieki
+spēles fons
+
+Kad ienaidnieks vai spēlētājs saņem bojājumus scale palielināšana un atgriešana
+
+
+Spēlei arī pievienoju fona mūziku
 
