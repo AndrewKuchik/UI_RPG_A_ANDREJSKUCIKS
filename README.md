@@ -58,7 +58,7 @@ Ienaidnieki tiek izvēlēti nejauši (random) katru reizi, kad iepriekšējais n
 
 
 
-6 Shield sistēma – spēlētājs var ieslēgt/izslēgt vairogu, kas samazina saņemto bojājumu
+6 Shield sistēma spēlētājs var ieslēgt/izslēgt vairogu, kas samazina saņemto bojājumu
 
 
 
